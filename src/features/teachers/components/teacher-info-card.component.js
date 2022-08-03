@@ -35,6 +35,7 @@ const Rating = styled.View`
   padding-top: ${(props) => props.theme.space[2]};
   padding-bottom: ${(props) => props.theme.space[2]};
 `;
+
 const Section = styled.View`
   flex-direction: row;
   align-items: center;
