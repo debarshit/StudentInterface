@@ -5,7 +5,6 @@ import styled from "styled-components/native";
 
 import { TeacherInfoCard } from "../components/teacher-info-card.component";
 import { Spacer } from "../../../components/spacer/spacer.component";
-import { Text } from "../../../components/typography/text.component";
 
 const SafeArea = styled(SafeAreaView)`
   flex: 1;

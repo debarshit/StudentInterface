@@ -2,6 +2,7 @@ import React from "react";
 import { SvgXml } from "react-native-svg";
 
 import star from "../../../../assets/star";
+import { Text } from "../../../components/typography/text.component";
 
 import {
   TeacherCard,
