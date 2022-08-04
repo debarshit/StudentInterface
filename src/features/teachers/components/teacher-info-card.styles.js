@@ -6,11 +6,11 @@ export const Icon = styled.Image`
   height: 15px;
 `;
 
-export const RestaurantCard = styled(Card)`
+export const TeacherCard = styled(Card)`
   background-color: ${(props) => props.theme.colors.bg.primary};
 `;
 
-export const RestaurantCardCover = styled(Card.Cover)`
+export const TeacherCardCover = styled(Card.Cover)`
   padding: ${(props) => props.theme.space[3]};
   background-color: ${(props) => props.theme.colors.bg.primary};
 `;
@@ -34,9 +34,3 @@ export const Section = styled.View`
   flex-direction: row;
   align-items: center;
 `;
-
-export const SectionEnd = styled.View`
-  flex: 1;
-  flex-direction: row;
-  justify-content: flex-end;
-`; 
