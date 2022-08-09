@@ -15,7 +15,7 @@ import { useFonts as useLato, Lato_400Regular } from "@expo-google-fonts/lato";
 import { theme } from "./src/infrastructure/theme";
 import { TeachersScreen } from "./src/features/teachers/screens/teachers.screen";
 import { SafeArea } from "./src/components/utility/safe-area.component";
-import { TeachersContextProvider } from "./src/services/teachers/Teachers.context";
+import { TeachersContextProvider } from "./src/services/teachers/teachers.context";
 
 const Tab = createBottomTabNavigator();
 
