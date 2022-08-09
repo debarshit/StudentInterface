@@ -15,21 +15,21 @@ import {
 
 export const TeacherInfoCard = ({ teacher = {} }) => {
   const {
-    name = "Some Teacher",
-    photos = [
+    TeacherName = "Some Teacher",
+    TeacherPhoto = [
       "https://www.foodiesfeed.com/wp-content/uploads/2019/06/top-view-for-box-of-2-burgers-home-made-600x899.jpg",
     ],
-    address = "100 some random street",
-    rating = 4,
+    TeacherAddress = "100 some random street",
+    TeacherRating = 4,
   } = teacher;
 
-  const ratingArray = Array.from(new Array(Math.floor(rating)));
+  const ratingArray = Array.from(new Array(Math.floor(TeacherRating)));
 
   return (
     <TeacherCard elevation={5}>
-      <TeacherCardCover key={name} source={{ uri: photos[0] }} />
+      <TeacherCardCover key={TeacherName} source={{ uri: TeacherPhoto }} />
       <Info>
-        <Text variant="label">{name}</Text>
+        <Text variant="label">{TeacherName}</Text>
         <Section>
           <Rating>
             {ratingArray.map(() => (
@@ -37,7 +37,7 @@ export const TeacherInfoCard = ({ teacher = {} }) => {
             ))}
           </Rating>
         </Section>
-        <Address>{address}</Address>
+        <Address>{TeacherAddress}</Address>
       </Info>
     </TeacherCard>
   );

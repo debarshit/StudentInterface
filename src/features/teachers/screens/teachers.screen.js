@@ -36,7 +36,7 @@ export const TeachersScreen = () => {
             </Spacer>
           );
         }}
-        keyExtractor={(item) => item.Name}
+        keyExtractor={(item) => item.TeacherId}
       />
     </SafeArea>
   );
