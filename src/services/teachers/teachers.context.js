@@ -1,5 +1,4 @@
 import React, { useState, useContext, createContext, useEffect } from "react";
-import { Text } from "react-native";
 
 import { teachersRequest } from "./teachers.service";
 
@@ -28,7 +27,7 @@ export const TeachersContextProvider = ({ children }) => {
           setError(err);
         });
     } else {
-      <Text>We are currently not available in this location.</Text>
+      setIsLoading(false);
     }
   };
   useEffect(() => {
