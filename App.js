@@ -16,6 +16,7 @@ import { theme } from "./src/infrastructure/theme";
 import { TeachersScreen } from "./src/features/teachers/screens/teachers.screen";
 import { SafeArea } from "./src/components/utility/safe-area.component";
 import { TeachersContextProvider } from "./src/services/teachers/teachers.context";
+import { LocationContextProvider } from "./src/services/location/location.context";
 
 const Tab = createBottomTabNavigator();
 
@@ -61,21 +62,23 @@ export default function App() {
   return (
     <>
       <ThemeProvider theme={theme}>
-      <TeachersContextProvider>
-        <NavigationContainer>
-            <Tab.Navigator
-              screenOptions={createScreenOptions}
-              tabBarOptions={{
-                activeTintColor: "tomato",
-                inactiveTintColor: "gray",
-              }}
-            >
-              <Tab.Screen name="Teachers" component={TeachersScreen} />
-              <Tab.Screen name="Map" component={Map} />
-              <Tab.Screen name="Settings" component={Settings} />
-            </Tab.Navigator>
-          </NavigationContainer>
-        </TeachersContextProvider>
+      <LocationContextProvider>
+          <TeachersContextProvider>
+            <NavigationContainer>
+              <Tab.Navigator
+                screenOptions={createScreenOptions}
+                tabBarOptions={{
+                  activeTintColor: "tomato",
+                  inactiveTintColor: "gray",
+                }}
+              >
+                <Tab.Screen name="Teachers" component={TeachersScreen} />
+                <Tab.Screen name="Map" component={Map} />
+                <Tab.Screen name="Settings" component={Settings} />
+              </Tab.Navigator>
+            </NavigationContainer>
+          </TeachersContextProvider>
+        </LocationContextProvider>
       </ThemeProvider>
       <ExpoStatusBar style="auto" />
     </>
