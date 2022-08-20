@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { FlatList } from "react-native";
+import { FlatList, TouchableOpacity } from "react-native";
 import styled from "styled-components/native";
 import { ActivityIndicator, Colors } from "react-native-paper";
 
@@ -26,7 +26,7 @@ const LoadingContainer = styled.View`
   left: 50%;
 `;
 
-export const TeachersScreen = () => {
+export const TeachersScreen = ({ navigation }) => {
   const { isLoading, teachers } = useContext(TeachersContext);
   return (
     <SafeArea>
@@ -40,9 +40,13 @@ export const TeachersScreen = () => {
         data={teachers}
         renderItem={({ item }) => {
           return (
-            <Spacer position="bottom" size="large">
-              <TeacherInfoCard teacher={item} />
-            </Spacer>
+            <TouchableOpacity
+              onPress={() => navigation.navigate("TeacherDetail")}
+            >
+              <Spacer position="bottom" size="large">
+                <TeacherInfoCard teacher={item} />
+              </Spacer>
+            </TouchableOpacity>
           );
         }}
         keyExtractor={(item) => item.TeacherId}
