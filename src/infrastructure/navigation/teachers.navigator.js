@@ -7,6 +7,7 @@ import {
 } from "@react-navigation/stack";
 
 import { TeachersScreen } from "../../features/teachers/screens/teachers.screen";
+import { TeacherDetailScreen } from "../../features/teachers/screens/teacher-detail.screen";
 
 const TeacherStack = createStackNavigator();
 
@@ -21,7 +22,7 @@ export const TeachersNavigator = () => {
       <TeacherStack.Screen name="Teachers" component={TeachersScreen} />
       <TeacherStack.Screen
         name="TeacherDetail"
-        component={() => <Text>Teacher Detail</Text>}
+        component={TeacherDetailScreen}
       />
     </TeacherStack.Navigator>
   );

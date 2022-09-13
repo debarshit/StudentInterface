@@ -41,7 +41,11 @@ export const TeachersScreen = ({ navigation }) => {
         renderItem={({ item }) => {
           return (
             <TouchableOpacity
-              onPress={() => navigation.navigate("TeacherDetail")}
+              onPress={() =>
+                navigation.navigate("TeacherDetail", {
+                  teacher: item,
+                })
+              }
             >
               <Spacer position="bottom" size="large">
                 <TeacherInfoCard teacher={item} />
