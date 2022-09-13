@@ -13,7 +13,7 @@ export const TeacherDetailScreen = ({ route }) => {
   return (
     <SafeArea>
       <TeacherInfoCard teacher={teacher} />
-      <teacherCourseslist />
+      <teacherCoursesList />
     </SafeArea>
   );
 };
